@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern User Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(-45deg,
+                    #ff00cc,
+                    #3333ff,
+                    #00ffcc,
+                    #ffcc00,
+                    #ff0066,
+                    #6600ff,
+                    #00ffff);
+            background-size: 600% 600%;
+            animation: gradientFlow 15s ease infinite;
+            z-index: -1;
+        }
+
+        @keyframes gradientFlow {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+        }
+
+        .user-card {
+            width: 350px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 30px 25px;
+            color: #fff;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .user-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .avatar-border {
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            padding: 4px;
+            background: linear-gradient(45deg, #f093fb, #f5576c);
+        }
+
+        .avatar-border img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #1e3c72;
+        }
+
+        .user-card h2 {
+            font-size: 22px;
+            margin-bottom: 4px;
+        }
+
+        .user-card .username {
+            font-size: 14px;
+            color: #ccc;
+            margin-bottom: 10px;
+        }
+
+        .user-card .location {
+            font-size: 14px;
+            margin-bottom: 6px;
+        }
+
+        .user-card .email {
+            font-size: 13px;
+            color: #ddd;
+            margin-bottom: 15px;
+            word-break: break-word;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            padding: 0 10px;
+        }
+
+        .stats div {
+            text-align: center;
+        }
+
+        .stats div h3 {
+            margin-bottom: 4px;
+            font-size: 18px;
+        }
+
+        .stats div p {
+            font-size: 12px;
+            color: #ccc;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .actions button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .btn-follow {
+            background: #f093fb;
+            color: #fff;
+        }
+
+        .btn-follow:hover {
+            background: #ec65f1;
+        }
+
+        .btn-message {
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            border: 1px solid #fff;
+        }
+
+        .btn-message:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            color: #f093fb;
+            font-size: 18px;
+            margin: 0 8px;
+            transition: 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="background"></div>
+
+    <div class="user-card">
+        <div class="avatar-border">
+            <img src="https://i.pravatar.cc/150?img=7" alt="User Avatar">
+        </div>
+        <h2>Om Takbhate</h2>
+        <div class="username">@om.codes</div>
+        <div class="location"><i class="fas fa-map-marker-alt"></i> Pune, India</div>
+        <div class="email"><i class="fas fa-envelope"></i> om.takbhate18@gmail.com</div>
+
+        <div class="stats">
+            <div>
+                <h3>85+</h3>
+                <p>Followers</p>
+            </div>
+            <div>
+                <h3>4+</h3>
+                <p>Projects</p>
+            </div>
+            <div>
+                <h3>4</h3>
+                <p>Following</p>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button class="btn-follow">Follow</button>
+            <button class="btn-message">Message</button>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://github.com/dev-om-7/" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/om-takbhate-b1192524a/" target="_blank"><i
+                    class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+
+</body>
+
+</html>
